@@ -1,100 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Samarth Goel | Resume</title>
+
+    <style>
+        :root {
+            --bg: #eef2f7;
+            --surface: #ffffff;
+            --surface-alt: #f8fafc;
+            --text: #1f2937;
+            --muted: #5b6472;
+            --border: #d8e0ea;
+            --accent: #1d4ed8;
+            --accent-soft: rgba(29, 78, 216, 0.08);
+            --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(29, 78, 216, 0.12), transparent 35%),
+                linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 48px auto;
+            background: var(--surface);
+            padding: 48px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 38px;
+            color: #111827;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        header a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        section {
+            margin-bottom: 28px;
+            padding-top: 2px;
+        }
+
+        section h2 {
+            display: inline-block;
+            font-size: 18px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+
+        .project {
+            margin-bottom: 24px;
+            padding: 18px 20px;
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .project h3 {
+            color: #111827;
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #334155;
+        }
+
+        .skills p {
+            margin-bottom: 12px;
+            color: #334155;
+        }
+
+        .education {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 18px 20px;
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .education h3 {
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .education p {
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .education strong {
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        @media(max-width:700px) {
+            .container {
+                margin: 16px;
+                padding: 24px;
+                border-radius: 16px;
+            }
+
+            .education {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            section h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
-    <header>
-        <h1>Samarth Goel</h1>
-        <h3>Full Stack Developer | B.Tech Student | Tech Enthusiast</h3>
-        <hr>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a B.Tech student with a growing passion for full-stack development.
-            I have worked with HTML, CSS, JavaScript, Node.js, and databases like MongoDB and MySQL.
-            I have also led teams in multiple hackathons, which helped me sharpen my problem-solving, collaboration, and leadership skills
-        </p>
-        <hr>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript</li>
-            <li>React & Node.js</li>
-            <li>Git & GitHub</li>
-        </ul>
-        <hr>
-    </section>
-    <section>
-        <h2>Experience</h2>
-        <table border="1" cellpadding="8">
-            <tr>
-                <th>Position</th>
-                <th>Company</th>
-                <th>Duration</th>
-            </tr>
-            <tr>
-                <td>Intern</td>
-                <td>Software Solutions</td>
-                <td>2014 - 2025</td>
-            </tr>
-        </table>
-        <hr>
-    </section>
-    <section>
-        <h2>Projects</h2>
-    
-        <h3>Project 1: E-Commerce Website</h3>
-        <p>Developed a complete e-commerce platform with products, cart, and payments.</p>
-        <ul>
-            <li>Technologies: React, Node.js, MongoDB</li>
-            <li>Timeline: 2 months</li>
-        </ul>
-    
-        <h3>Project 2: Portfolio Website</h3>
-        <p>A personal website showcasing my skills and projects.</p>
-        <ul>
-            <li>Technologies: HTML, CSS, JavaScript</li>
-            <li>Timeline: 4 weeks</li>
-        </ul>
-        <hr>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <table border="1" cellpadding="8">
-            <tr>
-                <th>Degree</th>
-                <th>Institution</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>B.Tech in Information Technology</td>
-                <td>JSSATEN</td>
-                <td>2023</td>
-            </tr>
-            <tr>
-                <td>Web Development Cohort</td>
-                <td>ChaiAurCode</td>
-                <td>2026</td>
-            </tr>
-        </table>
-        <hr>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <p>Email: samarthiitbalumnus@gmail.com</p>
-        <p>Phone: +91 9568300050</p>
-        <p>Location: Meerut</p>
-        <hr>
-    </section>
-    <footer>
-        <p>&copy; 2026 Samarth Goel. All rights reserved.</p>
-    </footer>
+
+    <div class="container">
+
+        <header>
+
+            <h1>Samarth Goel</h1>
+
+            <p>
+                📞 <a href="tel:+919568300050">+91-9568300050</a> |
+                📧 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=samarthiitbalumnus@gmail.com" target="_blank"
+                    rel="noopener noreferrer">samarthiitbalumnus@gmail.com</a> |
+                📍 Noida, India
+            </p>
+
+            <p>
+                <a href="https://linkedin.com/in/samarth-goel-b32346204" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/samarth-droid-engg" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                <a href="https://leetcode.com/u/R4ryA95PYA/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+            </p>
+
+        </header>
+
+        <section>
+
+            <h2>Profile Summary</h2>
+
+            <p>
+                Information Technology undergraduate with strong foundations in Data Structures,
+                Algorithms, Object-Oriented Programming, Computer Networks and Full-Stack Engineering.
+                Experienced in JavaScript, TypeScript, C++, and Python while building AI-powered
+                applications, REST APIs, and scalable backend systems. Comfortable debugging,
+                learning new technologies quickly, and collaborating in software projects.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Education</h2>
+
+            <div class="education">
+
+                <div>
+                    <h3>JSS Academy of Technical Education, Noida</h3>
+                    <p>Bachelor of Technology (Information Technology)</p>
+                    <p>AKTU</p>
+                    <p>
+                        Coursework: Data Structures & Algorithms, OOP, DBMS,
+                        Operating Systems, Computer Networks
+                    </p>
+                </div>
+
+                <div>
+                    <strong>2023 – 2027</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="skills">
+
+            <h2>Technical Skills</h2>
+
+            <p><strong>Programming Languages:</strong> JavaScript, TypeScript, C++, Python, C</p>
+
+            <p><strong>Backend & Web:</strong> Node.js, Express.js, Django, React.js, REST APIs, HTTP, JWT, Google OAuth
+            </p>
+
+            <p><strong>Data & AI:</strong> MongoDB Atlas, MySQL, Google Gemini API, RAG, Vector Search, Transformers.js
+            </p>
+
+            <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code, Vite, Tailwind CSS</p>
+
+            <p><strong>Software Engineering:</strong> DSA, OOP, API Design, Debugging, Modular Architecture, Error
+                Handling</p>
+
+        </section>
+
+        <section>
+
+            <h2>Projects</h2>
+
+            <div class="project">
+
+                <h3>NiveshMitra — Conversational AI Investment Companion</h3>
+
+                <p class="subtitle">
+                    React • Node.js • Express • MongoDB Atlas • Google Gemini
+                </p>
+
+                <ul>
+                    <li>Built an end-to-end investment planning application using conversational onboarding.</li>
+
+                    <li>Designed REST APIs and integrated Google Gemini with MongoDB Atlas.</li>
+
+                    <li>Implemented panic detection using LLM inference with keyword and regex-based validation.</li>
+
+                    <li>Added Google Sign-In and interactive Recharts dashboards for SIP growth and investment
+                        projections.</li>
+
+                </ul>
+
+            </div>
+
+            <div class="project">
+
+                <h3>Project Collegia — Multilingual RAG Campus Assistant</h3>
+
+                <p class="subtitle">
+                    React • Node.js • Express • Transformers.js • Google Gemini
+                </p>
+
+                <ul>
+
+                    <li>Built a multilingual Retrieval-Augmented Generation (RAG) assistant for campus information.</li>
+
+                    <li>Implemented semantic search using embeddings and cosine similarity.</li>
+
+                    <li>Developed REST APIs (/query, /search, /health) with offline fallback support.</li>
+
+                    <li>Supported English, Hindi, Tamil, and Kannada with a responsive chat interface.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>Achievements</h2>
+
+            <ul>
+
+                <li>Solved 250+ DSA problems across LeetCode and Naukri Code360.</li>
+
+                <li>Achieved 1650+ rating on LeetCode.</li>
+
+                <li>Cleared Round 1 of Smart India Hackathon.</li>
+
+            </ul>
+
+        </section>
+
+        <section>
+
+            <h2>Certifications</h2>
+
+            <ul>
+
+                <li>Full Stack Web Development — ChaiAurCode Cohort by Hitesh Choudhary</li>
+
+                <li>Data Structures & Algorithms — CodeHelp by Love Babbar</li>
+
+            </ul>
+
+        </section>
+
+    </div>
 
 </body>
+
 </html>
